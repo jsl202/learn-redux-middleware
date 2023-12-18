@@ -5,9 +5,9 @@ import App from "./App";
 import { applyMiddleware, createStore } from "redux";
 import rootReducer from "./modules";
 import { Provider } from "react-redux";
-import loggerMiddleware from "./lib/loggerMiddleware";
+import logger from "redux-logger";
 
-const store = createStore(rootReducer, applyMiddleware(loggerMiddleware));
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
