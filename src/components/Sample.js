@@ -18,7 +18,7 @@ const Sample = ({ loadingPost, loadingUsers, post, users }) => {
         {!loadingUsers && users && (
           <ul>
             {users.map((user) => (
-              <li key={users.id}>
+              <li key={user.id}>
                 {user.username} ({user.email})
               </li>
             ))}
